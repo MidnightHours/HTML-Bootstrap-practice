@@ -1,0 +1,113 @@
+{{#with program.excursion}}
+  <header>
+      
+    <div><h1>Excursion program "{{name}}"</h1></div>
+    <div>
+      {{date}} <address>{{location.city}}, {{location.country}}</address>
+    </div>
+  </header>
+
+  <hr>
+  <hr>
+
+  <main>        
+      {{#each program}}
+        <section>
+          {{> title data=name big=true}}
+          <div><em>Type:</em> {{type}}</div>
+          <div><em>Duration:</em> {{duration}}h.</div>
+          <br>
+          {{#with details}}
+
+            {{#if museum}}
+
+              {{#with museum}}
+                {{> title data=name }}
+
+                {{#with location}}
+                  <div>
+                    <address>
+                      {{address}} 
+                      <br>
+                      {{city}}, {{country}}
+                    </address>
+                  </div>
+                {{/with}}
+
+                <br>
+
+                {{#each exhibits}}
+                  <div>
+                    <strong>{{name}}</strong> 
+                    {{#if artist}}
+                      ({{artist}})
+                    {{/if}}
+                  </div>
+                  <div>{{description}}</div>
+                  <div>
+                    <small>
+                      {{#if audio_guide}}
+                        There is an audio guide
+                      {{/if}}
+                    </small>
+                  </div>
+                  <br>  
+                {{/each}}
+
+              {{/with}}
+
+             
+            {{else}}
+
+               {{#with venue}}
+                {{> title data=name}}
+
+                {{#with location}}
+                  <div>
+                    <address>
+                      {{address}} 
+                      <br>
+                      {{city}}, {{country}}
+                    </address>
+                  </div>
+                {{/with}}
+
+              {{/with}}
+
+              <br>
+
+              {{#each performers}}
+                <div>
+                  <strong>{{name}}</strong>
+                </div>
+                <div>
+                  <small>{{type}}</small>
+                </div>
+                <br>
+
+              {{/each}}
+
+            {{/if}}
+
+            <br>
+
+            {{#with guide}}
+              <div>
+                <em>Guide:</em> {{name}}
+              </div>
+              <div>
+                <em>Language:</em> {{language}}
+              </div>
+              <div>
+                <em>Rating:</em> {{rating}}
+              </div>
+            {{/with}}
+
+          {{/with}}
+        </section>
+        <hr>
+      {{/each}}
+      
+  </main>
+
+{{/with}}
