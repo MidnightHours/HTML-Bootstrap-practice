@@ -1,0 +1,113 @@
+{{#with web}}
+  <header>
+    <h1>Web languages</h1>
+  </header>
+
+  <hr>
+
+  <main>
+      <section>
+
+        {{>title data=languages.[0].name big=true}}
+        <div>
+          <em>Version: {{languages.[0].version}}</em>
+        </div>
+        <div>
+          <p>{{languages.[0].description}}</p>
+        </div>
+        {{> title data="Elements:"}}
+        
+        {{#each languages.[0].elements}}
+          <div>
+            <code><mark>{{name}}</mark></code> <small>({{description}})</small>
+          </div>
+          <br>
+          <div>Attributes:</div>
+
+          <ul>
+            {{#each attributes}}
+              <li>
+                <div>
+                  <var>{{name}}</var> <small>({{description}})</small>
+                </div>              
+              </li>
+            {{/each}}
+          </ul>
+
+        {{/each}}
+        
+      </section>
+
+      <hr>
+
+      <section>
+
+        {{>title data=languages.[1].name big=true}}
+        <div>
+          <em>Version: {{languages.[1].version}}</em>
+        </div>
+        <div>
+          <p>{{languages.[1].description}}</p>
+        </div>
+        {{> title data="Properties:"}}
+
+         {{#each languages.[1].properties}}
+          <div>
+            <code><mark>{{name}}</mark></code> <small>({{description}})</small>
+          </div>
+          <br>
+          <div>Values:</div>
+
+          <ul>
+            {{#each values}}
+              <li>
+                <div>
+                  <var>{{value}}</var> <small>({{description}})</small>
+                </div>              
+              </li>
+            {{/each}}
+          </ul>
+
+        {{/each}}
+
+      </section>
+
+      <hr>
+
+      <section>
+
+        {{>title data=languages.[2].name big=true}}
+        <div>
+          <em>Version: {{languages.[2].version}}</em>
+        </div>
+        <div>
+          <p>{{languages.[2].description}}</p>
+        </div>
+        {{> title data="Functions:"}}
+
+          {{#each languages.[2].functions}}
+          <div>
+            <code><mark>{{name}}</mark></code> <small>({{description}})</small>
+          </div>
+          <br>
+          <div>Parameters:</div>
+
+          <ul>
+            {{#each parameters}}
+              <li>
+                <div>
+                  <var>{{name}}</var> ({{type}}) 
+                </div>  
+                <div>
+                  <small>{{description}}</small>
+                </div>            
+              </li>
+            {{/each}}
+          </ul>
+
+        {{/each}}
+
+      </section>
+  </main>
+
+{{/with}}
