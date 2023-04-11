@@ -262,7 +262,7 @@ router.get('/person', function (req, res) {
   res.render('person', {
     layout: 'basic',
     page: {
-      name: 'Person'
+      name: 'Person',
     },
 
     person: {
@@ -365,7 +365,7 @@ router.get('/bio', function (req, res) {
   res.render('bio', {
     layout: 'basic',
     page: {
-      name: 'Bio'
+      name: 'Bio',
     },
     name: 'Albert Einstein',
     birthdate: 'March 14, 1879',
@@ -462,10 +462,9 @@ router.get('/bio', function (req, res) {
 
 router.get('/program', function (req, res) {
   res.render('program', {
-
     layout: 'basic',
     page: {
-      name: 'Program'
+      name: 'Program',
     },
 
     program: {
@@ -552,10 +551,9 @@ router.get('/program', function (req, res) {
 
 router.get('/web', function (req, res) {
   res.render('web', {
-
     layout: 'basic',
     page: {
-      name: 'Web'
+      name: 'Web',
     },
 
     web: {
@@ -683,6 +681,85 @@ router.get('/web', function (req, res) {
 })
 
 // ================================================================
+
+router.get('/js', function (req, res) {
+  res.render('js', {
+    layout: 'basic',
+    page: {
+      name: 'JS',
+    },
+
+    name: 'JavaScript',
+    description:
+      'JavaScript is a popular high-level, dynamic, and interpreted programming language.',
+    history: {
+      year: 1995,
+      founder: 'Brendan Eich',
+    },
+    types: [
+      'Number',
+      'String',
+      'Boolean',
+      'Null',
+      'Undefined',
+      'Symbol',
+      'Object',
+    ],
+    syntax: {
+      variables: ['var', 'let', 'const'],
+      functions: ['function'],
+      conditionals: ['if', 'else', 'switch'],
+      loops: ['for', 'while', 'do-while'],
+      classes: ['class'],
+    },
+    features: [
+      'First-class functions',
+      'Closures',
+      'Dynamic typing',
+      'Prototype-based inheritance',
+      'Asynchronous programming with Promises and async/await',
+      'Modules with import/export statements',
+    ],
+    libraries: [
+      'jQuery',
+      'React',
+      'Angular',
+      'Vue',
+      'Node.js',
+      'Express.js',
+      'Lodash',
+      'Moment.js',
+    ],
+    tools: [
+      'Babel',
+      'Webpack',
+      'ESLint',
+      'Jest',
+      'Mocha',
+      'Chai',
+      'Selenium',
+      'Cypress',
+    ],
+    community: [
+      {
+        name: 'Stack Overflow',
+        type: 'forum',
+      },
+      {
+        name: 'JavaScript Weekly',
+        type: 'newsletter',
+      },
+      {
+        name: 'The Changelog',
+        type: 'podcast',
+      },
+      {
+        name: 'CSS-Tricks',
+        type: 'blog',
+      },
+    ],
+  })
+})
 
 // Підключаємо роутер до бек-енду
 module.exports = router

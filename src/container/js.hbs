@@ -1,0 +1,127 @@
+<header>
+  <h1>{{name}} <span class='badge bg-secondary'>JS</span></h1>
+  <br>
+  <div>
+    <b>{{description}}</b>
+  </div>
+  <div>
+    <em>Founder: </em>{{history.founder}} ({{history.year}})
+  </div>
+</header>
+
+<nav>
+  <a class="btn btn-primary" href="#types" role="button">Types</a>
+  <a class="btn btn-primary" href="#syntax" role="button">Syntax</a>
+  <a class="btn btn-primary" href="#features" role="button">Features</a>
+  <a class="btn btn-primary" href="#libraries" role="button">Libraries</a>
+  <a class="btn btn-primary" href="#tools" role="button">Tools</a>
+  <a class="btn btn-primary" href="#community" role="button">Community</a>
+
+</nav>
+
+<hr>
+<main>
+  <section>
+    <h2 id="types">Types</h2>
+    <br>
+    <div>
+      <ul>
+        {{#each types}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2 id="syntax">Syntax</h2>
+    {{#with syntax}}
+    <br>
+    <b>Variables</b>
+    <div>
+      {{#each variables}}
+      <span class="badge rounded-pill text-bg-secondary">{{this}}</span>
+      {{/each}}
+    </div>
+    <br>
+    <b>Functions</b>
+    <div>
+      {{#each functions}}
+      <span class="badge rounded-pill text-bg-secondary">{{this}}</span>
+      {{/each}}
+    </div>
+    <br>
+    <b>Conditionals</b>
+    <div>
+      {{#each conditionals}}
+      <span class="badge rounded-pill text-bg-secondary">{{this}}</span>
+      {{/each}}
+    </div>
+    <br>
+    <b>Loops</b>
+    <div>
+      {{#each loops}}
+      <span class="badge rounded-pill text-bg-secondary">{{this}}</span>
+      {{/each}}
+    </div>
+    <br>
+    <b>Classes</b>
+    <div>
+      {{#each classes}}
+      <span class="badge rounded-pill text-bg-secondary">{{this}}</span>
+      {{/each}}
+    </div>
+    {{/with}}
+  </section>
+
+  <hr>
+
+  <section>
+    <h2 id="features">Features</h2>
+    <br>
+    <ul>
+      {{#each features}}
+      <li>{{this}}</li>
+      {{/each}}
+    </ul>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2 id="libraries">Libraries</h2>
+    <br>
+    <ul>
+      {{#each libraries}}
+      <li>{{this}}</li>
+      {{/each}}
+    </ul>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2 id="tools">Tools</h2>
+    <br>
+    <ul>
+      {{#each tools}}
+      <li>{{this}}</li>
+      {{/each}}
+    </ul>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2 id="community">Community</h2>
+    <br>
+    {{#each community}}
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">{{name}} ({{type}})</a></li>
+    </ol>
+    {{/each}}
+  </section>
+
+</main>
