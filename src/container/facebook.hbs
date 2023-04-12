@@ -1,0 +1,132 @@
+<header>
+  <h1><span class='badge bg-primary'>{{name}}</span></h1>
+</header>
+
+<main>
+
+  {{#each users}}
+
+  <div class="list-group list-group">
+
+    <div class="list-group-item d-flex justify-content-between align-items-start">
+      <div class="ms-2 me-auto">
+        <div class="fw-bold">
+          <h2>{{name}}, {{age}} y.o <span class='badge bg-secondary'>{{gender}}</span></h2>
+        </div>
+
+        <table>
+          <tr>
+            <td>
+              <div class="list-group list-group">
+
+                <div class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">
+                      <h3><span class='badge bg-primary'>Friends</span></h3>
+                    </div>
+                  </div>
+                </div>
+
+                {{#each friends}}
+                <div class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">
+                      <h4>{{name}} {{age}} y.o <span class='badge bg-secondary'>{{gender}}</span></h4>
+                    </div>
+                    <div><b>Mutual friends:</b></div>
+
+                    {{#each mutual_friends}}
+                    <div>
+                      {{name}} {{age}} y.o
+                      <span class='badge bg-secondary'>{{gender}}</span>
+                      <span class="badge bg-primary rounded-pill">{{id}}</span>
+                      <div>
+
+                        {{#each mutual_friends}}
+                        <ul>
+                          <li>
+                            <div><small><b>Mutual friends:</b></small></div>
+                            <small>
+                              {{name}} {{age}} y.o
+                              <span class='badge bg-secondary'>{{gender}}</span>
+                              <span class="badge bg-primary rounded-pill">{{id}}</span>
+                            </small>
+                          </li>
+                        </ul>
+                        {{/each}}
+
+                      </div>
+                    </div>
+                    {{/each}}
+
+                  </div>
+                  <span class="badge bg-primary rounded-pill">{{id}}</span>
+                </div>
+                {{/each}}
+
+              </div>
+            </td>
+            <td>
+              <div class="list-group list-group">
+
+                <div class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">
+                      <h3><span class='badge bg-primary'>Groups</span></h3>
+                    </div>
+                  </div>
+                </div>
+
+                {{#each groups}}
+                <div class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">
+                      <h5>{{name}}<span class='badge bg-secondary'></span></h5>
+
+                    </div>
+                    <div>{{description}}</div>
+                    <div><b>Members:</b></div>
+
+                    {{#each members}}
+                    <div>
+                      {{name}} {{age}} y.o
+                      <span class='badge bg-secondary'>{{gender}}</span>
+                      <span class="badge bg-primary rounded-pill">{{id}}</span>
+                      <div>
+
+                        {{#each mutual_friends}}
+                        <ul>
+                          <li>
+                            <div><small><b>Mutual friends:</b></small></div>
+                            <small>
+                              {{name}} {{age}} y.o
+                              <span class='badge bg-secondary'>{{gender}}</span>
+                              <span class="badge bg-primary rounded-pill">{{id}}</span>
+                            </small>
+                          </li>
+                        </ul>
+                        {{/each}}
+
+                      </div>
+                    </div>
+                    {{/each}}
+
+                  </div>
+                  <span class="badge bg-primary rounded-pill">{{id}}</span>
+                </div>
+                {{/each}}
+
+              </div>
+            </td>
+
+
+          </tr>
+        </table>
+      </div>
+      <span class="badge bg-primary rounded-pill">{{id}}</span>
+    </div>
+  </div>
+
+  {{/each}}
+
+</main>
