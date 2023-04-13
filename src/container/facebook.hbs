@@ -43,8 +43,6 @@
                           <div class="list-group-item d-flex justify-content-between align-items-start">
                             <div class="ms-2 me-auto">
                               <div class="fw-bold">
-                                <h5>{{name}}<span class='badge bg-secondary'></span></h5>
-
                               </div>
                               <div>
                                 {{name}} {{age}} y.o
@@ -53,7 +51,7 @@
 
                               </div>
                               {{#if mutual_friends}}
-                              <div><b>Mutual friends:</b></div>
+                              <div><small>Mutual friends</small></div>
 
                               {{#each mutual_friends}}
                               <ul>
