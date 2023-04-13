@@ -47,22 +47,21 @@
                               <div>
                                 {{name}} {{age}} y.o
                                 <span class='badge bg-secondary'>{{gender}}</span>
-                                <span class="badge bg-primary rounded-pill">{{id}}</span>
-
                               </div>
+                              <br>
                               {{#if mutual_friends}}
                               <div><small>Mutual friends</small></div>
 
                               {{#each mutual_friends}}
-                              <ul>
-                                <li>
-                                  <small>
-                                    {{name}} {{age}} y.o
-                                    <span class='badge bg-secondary'>{{gender}}</span>
-                                    <span class="badge bg-primary rounded-pill">{{id}}</span>
-                                  </small>
-                                </li>
-                              </ul>
+                              <div>
+
+                                <small>
+                                  {{name}} {{age}} y.o
+                                  <span class='badge bg-secondary'>{{gender}}</span>
+                                  <span class="badge bg-primary rounded-pill">{{id}}</span>
+                                </small>
+
+                              </div>
                               {{/each}}
                               {{/if}}
 
@@ -85,6 +84,7 @@
 
                               </div>
                               <div>{{description}}</div>
+                              <br>
                               <div><b>Members:</b></div>
 
                               {{#each members}}
@@ -132,6 +132,7 @@
 
                     </div>
                     <div>{{description}}</div>
+                    <br>
                     <div><b>Members:</b></div>
 
                     {{#each members}}
