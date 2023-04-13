@@ -33,31 +33,77 @@
                     <div class="fw-bold">
                       <h4>{{name}} {{age}} y.o <span class='badge bg-secondary'>{{gender}}</span></h4>
                     </div>
-                    <div><b>Mutual friends:</b></div>
+                    <table>
+                      <tr>
+                        <td>
+                          <div><b>Mutual friends:</b></div>
 
-                    {{#each mutual_friends}}
-                    <div>
-                      {{name}} {{age}} y.o
-                      <span class='badge bg-secondary'>{{gender}}</span>
-                      <span class="badge bg-primary rounded-pill">{{id}}</span>
-                      <div>
+                          {{#each mutual_friends}}
 
-                        {{#each mutual_friends}}
-                        <ul>
-                          <li>
-                            <div><small><b>Mutual friends:</b></small></div>
-                            <small>
-                              {{name}} {{age}} y.o
-                              <span class='badge bg-secondary'>{{gender}}</span>
-                              <span class="badge bg-primary rounded-pill">{{id}}</span>
-                            </small>
-                          </li>
-                        </ul>
-                        {{/each}}
+                          <div class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                              <div class="fw-bold">
+                              </div>
+                              <div>
+                                {{name}} {{age}} y.o
+                                <span class='badge bg-secondary'>{{gender}}</span>
+                              </div>
+                              <br>
+                              {{#if mutual_friends}}
+                              <div><small>Mutual friends</small></div>
 
-                      </div>
-                    </div>
-                    {{/each}}
+                              {{#each mutual_friends}}
+                              <div>
+
+                                <small>
+                                  {{name}} {{age}} y.o
+                                  <span class='badge bg-secondary'>{{gender}}</span>
+                                  <span class="badge bg-primary rounded-pill">{{id}}</span>
+                                </small>
+
+                              </div>
+                              {{/each}}
+                              {{/if}}
+
+                            </div>
+                            <span class="badge bg-primary rounded-pill">{{id}}</span>
+                          </div>
+
+
+                          {{/each}}
+                        </td>
+                        <td>
+                          {{#if groups}}
+                          <div><b>Groups:</b></div>
+
+                          {{#each groups}}
+                          <div class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                              <div class="fw-bold">
+                                <h5>{{name}}<span class='badge bg-secondary'></span></h5>
+
+                              </div>
+                              <div>{{description}}</div>
+                              <br>
+                              <div><b>Members:</b></div>
+
+                              {{#each members}}
+                              <div>
+                                {{name}} {{age}} y.o
+                                <span class='badge bg-secondary'>{{gender}}</span>
+                                <span class="badge bg-primary rounded-pill">{{id}}</span>
+                              </div>
+                              {{/each}}
+
+                            </div>
+                            <span class="badge bg-primary rounded-pill">{{id}}</span>
+                          </div>
+                          {{/each}}
+                        </td>
+
+                        {{/if}}
+                      </tr>
+                    </table>
 
                   </div>
                   <span class="badge bg-primary rounded-pill">{{id}}</span>
@@ -66,6 +112,7 @@
 
               </div>
             </td>
+            {{#if groups}}
             <td>
               <div class="list-group list-group">
 
@@ -85,6 +132,7 @@
 
                     </div>
                     <div>{{description}}</div>
+                    <br>
                     <div><b>Members:</b></div>
 
                     {{#each members}}
@@ -92,22 +140,6 @@
                       {{name}} {{age}} y.o
                       <span class='badge bg-secondary'>{{gender}}</span>
                       <span class="badge bg-primary rounded-pill">{{id}}</span>
-                      <div>
-
-                        {{#each mutual_friends}}
-                        <ul>
-                          <li>
-                            <div><small><b>Mutual friends:</b></small></div>
-                            <small>
-                              {{name}} {{age}} y.o
-                              <span class='badge bg-secondary'>{{gender}}</span>
-                              <span class="badge bg-primary rounded-pill">{{id}}</span>
-                            </small>
-                          </li>
-                        </ul>
-                        {{/each}}
-
-                      </div>
                     </div>
                     {{/each}}
 
@@ -119,6 +151,7 @@
               </div>
             </td>
 
+            {{/if}}
 
           </tr>
         </table>
