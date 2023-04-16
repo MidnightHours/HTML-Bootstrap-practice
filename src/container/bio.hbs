@@ -1,41 +1,43 @@
 <header>
-  <div><h1>{{name}}</h1></div>
+  <div>
+    <h1>{{name}}</h1>
+  </div>
   <div>
     <b>Born:</b>
     {{birthdate}},
     <address>{{birthplace}}</address>
   </div>
 
-  <br />
 
-  <div>
+
+  <div class="my-4">
     <b>Died:</b>
     {{deathdate}}
     <address>{{deathplace}}</address>
   </div>
 
-  <br />
+
 
   <div>
     <b>Nationality:</b>
     {{nationality}}
   </div>
 
-  <br />
 
-  <div>
+
+  <div class="my-4">
     <b>Occupation:</b>
     {{occupation}}
   </div>
 
-  <br />
+
 
   <div>
     <details>
       <summary><b>Known for:</b></summary>
       <ul>
         {{#each known_for}}
-          <li>{{this}}</li>
+        <li>{{this}}</li>
         {{/each}}
       </ul>
     </details>
@@ -45,26 +47,26 @@
 <hr />
 
 <main>
-  
+
 
   <section>
     {{> title data='Education' big=true }}
     {{#each education}}
-      <div> 
-        {{institution}} ({{degree}}, {{year}})
-      </div>
-      <div>
-        Field: {{field}}
-      </div>
+    <div>
+      {{institution}} ({{degree}}, {{year}})
+    </div>
+    <div>
+      Field: {{field}}
+    </div>
     {{/each}}
   </section>
 
-  <section>
+  <section class="mt-4">
     {{> title data='Notable publications'}}
     <ul>
       {{#each notable_publications}}
-        <li><cite>{{title}}</cite> ({{year}}, <small>{{publisher}}</small>)</li>
-    
+      <li><cite>{{title}}</cite> ({{year}}, <small>{{publisher}}</small>)</li>
+
       {{/each}}
     </ul>
   </section>
@@ -73,16 +75,14 @@
 
   <section>
     {{> title data='Spouses' big=true }}
-      {{#each partners}}   
-        <div>
-          {{name}}, ({{relationship}}) 
-          <br>
-          {{years}}
-          <br>
-          <br>
-          
-        </div>
-      {{/each}}
+    {{#each partners}}
+    <div class="mb-5">
+      {{name}}, ({{relationship}})
+      <br>
+      {{years}}
+
+    </div>
+    {{/each}}
   </section>
 
   <hr>
@@ -90,11 +90,11 @@
   <section>
     {{> title data='Awards' big=true }}
     {{#each awards}}
-      <div>
-        <b>{{title}}</b> ({{year}})
-        <br>
-        <em>{{description}}</em>
-      </div>
+    <div>
+      <b>{{title}}</b> ({{year}})
+      <br>
+      <em>{{description}}</em>
+    </div>
     {{/each}}
   </section>
 
@@ -102,23 +102,23 @@
 
   <section>
     {{> title data='Influence' big=true }}
-    <br>
-    {{> title data='InfluenceS'  }}
+
+    {{> title data='InfluenceS' }}
     {{#each influences}}
-      <div>
-        {{this}}
+    <div>
+      {{this}}
       <br>
-      </div>
+    </div>
     {{/each}}
-    
-    
+
     <br>
-    {{> title data='InfluenceD'  }}
+
+    {{> title data='InfluenceD' }}
     {{#each influenced}}
-      <div>
-        {{this}}
+    <div>
+      {{this}}
       <br>
-      </div>
+    </div>
     {{/each}}
 
   </section>
@@ -126,41 +126,41 @@
   <hr>
 
   <section>
-      {{> title data='Quotes' big=true }}
-      <div>
-      
-        {{#each quotes}}
-          <q>{{this}}</q>
-          <br>
-        {{/each}}
-      </div>
-  </section>
+    {{> title data='Quotes' big=true }}
+    <div>
 
-  <hr>
-
-  <section>
-      {{> title data='Major discoveries' big=true }}
-      {{#each major_discoveries}}
-      <div>
-        <b>{{title}}</b> ({{year}})
-        <br>
-        <em>{{description}}</em>
-      </div>
+      {{#each quotes}}
+      <q>{{this}}</q>
+      <br>
       {{/each}}
+    </div>
+  </section>
+
+  <hr>
+
+  <section>
+    {{> title data='Major discoveries' big=true }}
+    {{#each major_discoveries}}
+    <div>
+      <b>{{title}}</b> ({{year}})
+      <br>
+      <em>{{description}}</em>
+    </div>
+    {{/each}}
 
   </section>
 
   <hr>
 
   <section>
-      {{> title data='Contributions' big=true }}
-      {{#with contributions}}
-      <div>
-        <b>{{title}}</b> ({{year}}) - {{field}}
-        <br>
-        <em>{{description}}</em>
-      </div>
-      {{/with}}
+    {{> title data='Contributions' big=true }}
+    {{#with contributions}}
+    <div>
+      <b>{{title}}</b> ({{year}}) - {{field}}
+      <br>
+      <em>{{description}}</em>
+    </div>
+    {{/with}}
   </section>
 
 

@@ -122,8 +122,8 @@
           {{#with features}}
           <div><b>{{ports.[0].type}}</b> ({{ports.[0].count}} count)</div>
           <div> ({{ports.[0].features}})</div>
-          <br>
-          <div><b>{{ports.[1].type}}</b> ({{ports.[1].count}} count)</div>
+
+          <div class="mt-3"><b>{{ports.[1].type}}</b> ({{ports.[1].count}} count)</div>
           {{/with}}
         </div>
       </div>
@@ -204,14 +204,14 @@
     <h3>Accessories</h3>
     {{#with features}}
     {{#each accessories}}
-    <div>
+    <div class="mb-3">
       <span class='badge bg-warning'>
         {{name}}
         <br>
         {{price}}$
       </span>
     </div>
-    <br>
+
     {{/each}}
     {{/with}}
 

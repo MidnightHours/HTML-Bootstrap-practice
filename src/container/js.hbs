@@ -1,7 +1,7 @@
 <header>
   <h1>{{name}} <span class='badge bg-secondary'>JS</span></h1>
-  <br>
-  <div>
+
+  <div class="mt-3">
     <b>{{description}}</b>
   </div>
   <div>
@@ -23,8 +23,8 @@
 <main>
   <section>
     <h2 id="types">Types</h2>
-    <br>
-    <div>
+
+    <div class="mt-3">
       <ul>
         {{#each types}}
         <li>{{this}}</li>
@@ -38,36 +38,35 @@
   <section>
     <h2 id="syntax">Syntax</h2>
     {{#with syntax}}
-    <br>
-    <b>Variables</b>
+    <b class="mt-3">Variables</b>
     <div>
       {{#each variables}}
       <span class="badge rounded-pill text-bg-secondary">{{this}}</span>
       {{/each}}
     </div>
-    <br>
-    <b>Functions</b>
+
+    <b class="mt-3">Functions</b>
     <div>
       {{#each functions}}
       <span class="badge rounded-pill text-bg-secondary">{{this}}</span>
       {{/each}}
     </div>
-    <br>
-    <b>Conditionals</b>
+
+    <b class="mt-3">Conditionals</b>
     <div>
       {{#each conditionals}}
       <span class="badge rounded-pill text-bg-secondary">{{this}}</span>
       {{/each}}
     </div>
-    <br>
-    <b>Loops</b>
+
+    <b class="mt-3">Loops</b>
     <div>
       {{#each loops}}
       <span class="badge rounded-pill text-bg-secondary">{{this}}</span>
       {{/each}}
     </div>
-    <br>
-    <b>Classes</b>
+
+    <b class="mt-3">Classes</b>
     <div>
       {{#each classes}}
       <span class="badge rounded-pill text-bg-secondary">{{this}}</span>
@@ -80,8 +79,8 @@
 
   <section>
     <h2 id="features">Features</h2>
-    <br>
-    <ul>
+
+    <ul class="mt-3">
       {{#each features}}
       <li>{{this}}</li>
       {{/each}}
@@ -92,8 +91,8 @@
 
   <section>
     <h2 id="libraries">Libraries</h2>
-    <br>
-    <ul>
+
+    <ul class="mt-3">
       {{#each libraries}}
       <li>{{this}}</li>
       {{/each}}
@@ -104,8 +103,8 @@
 
   <section>
     <h2 id="tools">Tools</h2>
-    <br>
-    <ul>
+
+    <ul class="mt-3">
       {{#each tools}}
       <li>{{this}}</li>
       {{/each}}
@@ -115,8 +114,8 @@
   <hr>
 
   <section>
-    <h2 id="community">Community</h2>
-    <br>
+    <h2 id="community" class="mb-3">Community</h2>
+
     {{#each community}}
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="#">{{name}} ({{type}})</a></li>
