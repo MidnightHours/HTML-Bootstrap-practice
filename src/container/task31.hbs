@@ -22,8 +22,8 @@
   {{#with header}}
   <div>
     <h1>{{title}}</h1>
-    <br>
-    <p>{{description}}</p>
+
+    <p class="mt-3">{{description}}</p>
     {{#with button}}
     <a href="{{href}}" class="btn btn-primary">{{text}}</a>
     {{/with}}
@@ -39,8 +39,8 @@
   {{#with city}}
   <section>
     <h2>{{title}}</h2>
-    <br>
-    <div class="row gy-5 gx-3">
+
+    <div class="row gy-5 gx-3 mt-3">
       {{#each cards}}
       <div class="col-5">
         <div class="card">
@@ -67,8 +67,8 @@
 
   {{#with winner}}
   <section>
-    <h2>{{title}}</h2>
-    <br>
+    <h2 class="mb-3">{{title}}</h2>
+
     {{#with table}}
     <table class="table table-bordered">
       <tbody>
@@ -96,8 +96,8 @@
   {{#with gallery}}
   <section>
     <h2>{{title}}</h2>
-    <br>
-    <div class="row gx-2">
+
+    <div class="row gx-2 mt-3">
       {{#each cards}}
       <div class="col-4">
         <div class="card">
@@ -121,8 +121,8 @@
   {{#with relaxion}}
   <section>
     <div class="display-3">{{title}}</div>
-    <br>
-    <div class="row gx-2 gy-5">
+
+    <div class="row gx-2 gy-5 mt-3">
       {{#each cards}}
       <div class="col-5">
         <div class="card text-bg-secondary">
@@ -169,8 +169,8 @@
   {{#with proposition}}
   <section>
     <div class="display-2">{{title}}</div>
-    <br>
-    <div class="row gx-2">
+
+    <div class="row gx-2 t-3">
       {{#each card}}
       <div class="col-5">
         <div class="card bg-warning text-light">
@@ -196,8 +196,8 @@
 <footer>
   {{#with footer}}
   <h5>{{title}}</h5>
-  <br>
-  <div class="row">
+
+  <div class="row mt-3">
     <div class="col-3">
       {{#each navigation}}
       <div>
