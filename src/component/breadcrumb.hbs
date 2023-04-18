@@ -1,0 +1,13 @@
+<ol class="breadcrumb my-5 ms-4">
+    {{#each breadcrumb}}
+    {{#if @last}}
+    <li class="breadcrumb-item disabled">
+        {{name}}
+    </li>
+    {{else}}
+    <li class="breadcrumb-item">
+        <a href="{{url}}">{{name}}</a>
+    </li>
+    {{/if}}
+    {{/each}}
+</ol>
