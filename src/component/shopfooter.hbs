@@ -6,7 +6,8 @@
         <div class=" nav col-2">
             <div>
                 {{#each this}}
-                <a href="{{this.link}}" class="nav-link {{#if @last}} disabled {{/if}}">{{this.text}}</a>
+                <a href="{{this.link}}" class="nav-link {{#if @last}} disabled {{/if}}"
+                    target="_blank">{{this.text}}</a>
                 {{/each}}
             </div>
         </div>
