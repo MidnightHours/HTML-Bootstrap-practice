@@ -1,0 +1,55 @@
+<min>
+
+  {{#with header}}
+  <h1 class="mt-5 mb-3">{{title}}</h1>
+  <div>
+    {{#with button}}
+    <button href="{{link}}" class="btn btn-outline-secondary">{{text}}</button>
+    {{/with}}
+  </div>
+  {{/with}}
+
+  <hr class="my-5">
+
+  {{#each goodsBlock}}
+  {{> cardGoodsItem }}
+  {{/each}}
+
+  <hr class="my-5">
+
+  {{#with total}}
+  <div>
+    <h2>{{title}}</h2>
+    <div class="display-6"><b>{{amount}}</b></div>
+    <div class="mt-2">{{delivery}}</div>
+    {{#each buttons}}
+    <div class="my-3">
+      <button href="{{link}}"
+        class="btn {{#if isSuccess}} btn-success {{/if}} {{#if isOutline}} btn-outline-success {{/if}}">
+        {{text}}
+      </button>
+    </div>
+    {{/each}}
+  </div>
+  {{/with}}
+
+  <hr class="my-5">
+
+  {{#with goodsOtherBlock}}
+  <div>
+    <h3 class="text-center mb-3">{{title}}</h3>
+    <div class="row g-2">
+      {{#each cards}}
+      <div class="col-4">
+        {{> shopcard}}
+      </div>
+      {{/each}}
+    </div>
+  </div>
+  {{/with}}
+
+  <hr class="my-5">
+
+  {{> shoppremium }}
+
+</min>
