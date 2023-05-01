@@ -12,92 +12,96 @@
 <hr>
 <hr>
 
-<main>
+<main class="row">
   {{#each program}}
-  <section>
-    {{> title data=name big=true}}
-    <div><em>Type:</em> {{type}}</div>
-    <div class="mb-3"><em>Duration:</em> {{duration}}h.</div>
-    {{#with details}}
 
-    {{#if museum}}
+  <section class="col-6">
 
-    {{#with museum}}
-    {{> title data=name }}
+    <div class="card p-3">
+      {{> title data=name big=true}}
+      <div><em>Type:</em> {{type}}</div>
+      <div class="mb-3"><em>Duration:</em> {{duration}}h.</div>
+      {{#with details}}
 
-    {{#with location}}
-    <div>
-      <address>
-        {{address}}, {{city}}, {{country}}
-      </address>
-    </div>
-    {{/with}}
+      {{#if museum}}
+
+      {{#with museum}}
+      {{> title data=name }}
+
+      {{#with location}}
+      <div>
+        <address>
+          {{address}}, {{city}}, {{country}}
+        </address>
+      </div>
+      {{/with}}
 
 
-    {{#each exhibits}}
-    <div class="mt-4">
-      <strong>{{name}}</strong>
-      {{#if artist}}
-      ({{artist}})
-      {{/if}}
-    </div>
-    <div>{{description}}</div>
-    <div class="mb-4">
-      <small>
-        {{#if audio_guide}}
-        There is an audio guide
+      {{#each exhibits}}
+      <div class="mt-4">
+        <strong>{{name}}</strong>
+        {{#if artist}}
+        ({{artist}})
         {{/if}}
-      </small>
+      </div>
+      <div>{{description}}</div>
+      <div class="mb-4">
+        <small>
+          {{#if audio_guide}}
+          There is an audio guide
+          {{/if}}
+        </small>
+      </div>
+      {{/each}}
+      {{/with}}
+
+      {{else}}
+
+      {{#with venue}}
+      {{> title data=name}}
+
+      {{#with location}}
+      <div>
+        <address>
+          {{address}},{{city}}, {{country}}
+        </address>
+      </div>
+      {{/with}}
+
+      {{/with}}
+
+
+      {{#each performers}}
+      <div class="mt-4">
+        <strong>{{name}}</strong>
+      </div>
+      <div class="mb-4">
+        <small>{{type}}</small>
+      </div>
+
+      {{/each}}
+
+      {{/if}}
+
+
+      {{#with guide}}
+      <div class="mt-4">
+        <em>Guide:</em> {{name}}
+      </div>
+      <div>
+        <em>Language:</em> {{language}}
+      </div>
+      <div>
+        <em>Rating:</em> {{rating}}
+      </div>
+      {{/with}}
+
+      {{/with}}
     </div>
-    {{/each}}
-    {{/with}}
-
-    {{else}}
-
-    {{#with venue}}
-    {{> title data=name}}
-
-    {{#with location}}
-    <div>
-      <address>
-        {{address}},{{city}}, {{country}}
-      </address>
-    </div>
-    {{/with}}
-
-    {{/with}}
 
 
-    {{#each performers}}
-    <div class="mt-4">
-      <strong>{{name}}</strong>
-    </div>
-    <div class="mb-4">
-      <small>{{type}}</small>
-    </div>
-
-    {{/each}}
-
-    {{/if}}
-
-
-    {{#with guide}}
-    <div class="mt-4">
-      <em>Guide:</em> {{name}}
-    </div>
-    <div>
-      <em>Language:</em> {{language}}
-    </div>
-    <div>
-      <em>Rating:</em> {{rating}}
-    </div>
-    {{/with}}
-
-    {{/with}}
   </section>
-  <hr>
   {{/each}}
-
 </main>
 
 {{/with}}
