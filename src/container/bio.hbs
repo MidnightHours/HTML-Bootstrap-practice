@@ -1,38 +1,33 @@
-<header>
-  <div>
-    <h1>{{name}}</h1>
+<header class="row g-4">
+
+  <div class="col-12">
+    <h1 class="display-3">{{name}}</h1>
   </div>
-  <div>
+
+  <div class="col-6">
     <b>Born:</b>
     {{birthdate}},
     <address>{{birthplace}}</address>
   </div>
 
-
-
-  <div class="my-4">
+  <div class="col-6">
     <b>Died:</b>
     {{deathdate}}
     <address>{{deathplace}}</address>
   </div>
 
-
-
-  <div>
-    <b>Nationality:</b>
-    {{nationality}}
+  <div class="col-6">
+    <div>
+      <b>Nationality:</b>
+      {{nationality}}
+    </div>
+    <div class="my-3">
+      <b>Occupation:</b>
+      {{occupation}}
+    </div>
   </div>
 
-
-
-  <div class="my-4">
-    <b>Occupation:</b>
-    {{occupation}}
-  </div>
-
-
-
-  <div>
+  <div class="col-6">
     <details>
       <summary><b>Known for:</b></summary>
       <ul>
@@ -76,7 +71,7 @@
   <section>
     {{> title data='Spouses' big=true }}
     {{#each partners}}
-    <div class="mb-5">
+    <div class="my-3">
       {{name}}, ({{relationship}})
       <br>
       {{years}}
@@ -90,7 +85,7 @@
   <section>
     {{> title data='Awards' big=true }}
     {{#each awards}}
-    <div>
+    <div class="m">
       <b>{{title}}</b> ({{year}})
       <br>
       <em>{{description}}</em>
@@ -100,51 +95,53 @@
 
   <hr>
 
-  <section>
+  <section class="row g-4">
     {{> title data='Influence' big=true }}
 
-    {{> title data='InfluenceS' }}
-    {{#each influences}}
-    <div>
-      {{this}}
-      <br>
-    </div>
-    {{/each}}
-
-    <br>
-
-    {{> title data='InfluenceD' }}
-    {{#each influenced}}
-    <div>
-      {{this}}
-      <br>
-    </div>
-    {{/each}}
-
-  </section>
-
-  <hr>
-
-  <section>
-    {{> title data='Quotes' big=true }}
-    <div>
-
-      {{#each quotes}}
-      <q>{{this}}</q>
-      <br>
+    <div class="col-6">
+      {{> title data='InfluenceS' }}
+      {{#each influences}}
+      <div>
+        {{this}}
+        <br>
+      </div>
       {{/each}}
     </div>
+
+    <div class="col-6">
+      {{> title data='InfluenceD' }}
+      {{#each influenced}}
+      <div>
+        {{this}}
+        <br>
+      </div>
+      {{/each}}
+    </div>
+
   </section>
 
   <hr>
 
   <section>
-    {{> title data='Major discoveries' big=true }}
+    <div class="mb-3">{{> title data='Quotes' big=true }}</div>
+
+
+    {{#each quotes}}
+    <div class="mt-2">
+      <q>{{this}}</q>
+    </div>
+    {{/each}}
+
+  </section>
+
+  <hr>
+
+  <section>
+    <div class="mb-3">{{> title data='Major discoveries' big=true }}</div>
     {{#each major_discoveries}}
     <div>
       <b>{{title}}</b> ({{year}})
-      <br>
-      <em>{{description}}</em>
+      <div class="mt-2"><em>{{description}}</em></div>
     </div>
     {{/each}}
 
@@ -153,12 +150,11 @@
   <hr>
 
   <section>
-    {{> title data='Contributions' big=true }}
+    <div class="mb-3">{{> title data='Contributions' big=true }}</div>
     {{#with contributions}}
     <div>
       <b>{{title}}</b> ({{year}}) - {{field}}
-      <br>
-      <em>{{description}}</em>
+      <div class="mt-3"><em>{{description}}</em></div>
     </div>
     {{/with}}
   </section>

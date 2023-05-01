@@ -1,17 +1,70 @@
-{{! 
-Це код container файлу для index сторінки, 
-в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
- }}
+<main>
 
-<div class='p-5'>
-  <h1>USB хаб Type C 12 в 1 HDMI VGA AUX 3.5 mm</h1>
 
-  <button
-    type='button'
-    class='btn btn-primary'
-  >Купити</button>
-</div>
-{{! 
-    Цей код містить лише те, що буде виводитись в <body>
-    Адже наш layout/default.hbs має вже структуру HTML
-}}
+
+  <nav class="row">
+
+    <div class="col-6 mt-5">
+      <h1>Page list</h1>
+      <div class="mt-5 mb-5">
+        <div>
+          <h3>This is my pet projects</h3>
+        </div>
+        <div>A pet project is a project taken on and supported for personal reasons.</div>
+      </div>
+    </div>
+
+    <div class="col-6 my-4 text-end">
+      <div>
+        <h2>My resume:</h2>
+        <a href="/summary" target="_blank" class="btn btn-primary btn-lg text-uppercase">Resume</a>
+
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="card">
+        <h5 class="card-header bg-secondary text-light text-center p-3">Bootstrap start</h5>
+        <div class="card-body d-grid gap-2">
+          <a href="/task21" target="_blank" class="btn btn-outline-secondary">Task 2.1</a>
+          <a href="/task22" target="_blank" class="btn btn-outline-secondary">Task 2.2</a>
+          <a href="/task31" target="_blank" class="btn btn-outline-secondary">Task 2.3</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="card">
+        <h5 class="card-header bg-secondary text-light text-center p-3">Shop</h5>
+        <div class="card-body d-grid gap-2">
+          <a href="/shophome" target="_blank" class="btn btn-outline-secondary">Home</a>
+          <a href="/shopproduct" target="_blank" class="btn btn-outline-secondary">Product</a>
+          <a href="/shopnews" target="_blank" class="btn btn-outline-secondary">News</a>
+          <a href="/shoporder" target="_blank" class="btn btn-outline-secondary">Order</a>
+          <a href="/shopcart" target="_blank" class="btn btn-outline-secondary">Cart</a>
+          <a href="/shopprofile" target="_blank" class="btn btn-outline-secondary">Profile</a>
+          <a href="/shopreview" target="_blank" class="btn btn-outline-secondary">Review</a>
+          <a href="/shopcatalog" target="_blank" class="btn btn-outline-secondary">Catalog</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="card">
+        <h5 class="card-header bg-secondary text-light text-center p-3">Other</h5>
+        <div class="card-body d-grid gap-2">
+          <a href="/person" target="_blank" class="btn btn-outline-secondary">Person</a>
+          <a href="/bio" target="_blank" class="btn btn-outline-secondary">Bio</a>
+          <a href="/program" target="_blank" class="btn btn-outline-secondary">Program</a>
+          <a href="/web" target="_blank" class="btn btn-outline-secondary">Web</a>
+          <a href="/js" target="_blank" class="btn btn-outline-secondary">JS</a>
+          <a href="/car" target="_blank" class="btn btn-outline-secondary">Car</a>
+          <a href="/mac" target="_blank" class="btn btn-outline-secondary">Mac</a>
+          <a href="/facebook" target="_blank" class="btn btn-outline-secondary">Facebook</a>
+        </div>
+      </div>
+    </div>
+
+  </nav>
+
+</main>

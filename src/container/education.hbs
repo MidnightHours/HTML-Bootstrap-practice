@@ -1,26 +1,26 @@
 <div>
-   {{#with main}}
-		<main>
+	{{#with main}}
+	<main>
 
 		<section>
 			{{> title data='My educationss' big=true }}
 			<ul>
 				{{#each educations}}
-					<li>{{name}} 
-						{{#unless isEnd}} (ще в процесі) {{/unless}}
-					</li>
+				<li>{{name}}
+					{{#unless isEnd}} (ще в процесі) {{/unless}}
+				</li>
 				{{/each}}
 			</ul>
 		</section>
 
-		<section>
+		<section class="mt-5">
 			{{> title data='My certificates' }}
 			<ul>
 				{{#each certificates}}
-					<li>{{name}} ({{id}})</li>
+				<li>{{name}} ({{id}})</li>
 				{{/each}}
 			</ul>
 		</section>
-		</main> 
+	</main>
 	{{/with}}
 </div>
